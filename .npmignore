@@ -1,6 +1,5 @@
-.yarn
+.yarn*
 .idea
-.yarnrc
 .nvmrc
 yarn-error.log
 .editorconfig
