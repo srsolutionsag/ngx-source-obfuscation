@@ -39,7 +39,7 @@ deploy_dry_run:
   stage: test
   extends: .node_docker
   script:
-    - npm publish build/distributions/npm --dry-run --access public
+    - npm publish --dry-run --access public
   dependencies:
     - build
 
@@ -49,7 +49,7 @@ deploy:
   only:
     refs:
       - master
-  script: npm publish build/distributions/npm --access public
+  script: npm publish --access public
   when: manual
   dependencies:
     - build
