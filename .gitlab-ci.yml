@@ -6,7 +6,7 @@ variables:
   YARN_CACHE_FOLDER: &yarn_cache_path "$CI_PROJECT_DIR/.yarn_cache_$CI_PROJECT_NAME"
 
 cache:
-  key: "pdf_wrap_yarn_node_cache-$CI_COMMIT_REF_SLUG"
+  key: "$CI_PROJECT_NAME_yarn_node_cache-$CI_COMMIT_REF_SLUG"
   paths:
     - *yarn_cache_path
 
