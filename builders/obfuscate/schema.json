@@ -40,9 +40,9 @@
                         "$id": "#/properties/files/items/properties/output",
                         "type": "string",
                         "title": "The Output Schema",
-                        "default": "www",
+                        "default": ".",
                         "examples": [
-                            "./www"
+                            "."
                         ],
                         "pattern": "^(.+)$"
                     }

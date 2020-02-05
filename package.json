@@ -14,13 +14,14 @@
     },
     "private": false,
     "dependencies": {
+        "@angular-devkit/architect": "^0.803.24",
+        "@angular-devkit/core": "^8.3.24",
         "javascript-obfuscator": "^0.24.4",
         "multi-stage-sourcemap": "^0.3.1",
         "readdirp": "^3.3.0",
         "rxjs": "^6.5.4"
     },
     "devDependencies": {
-        "@angular-devkit/architect": "^0.803.24",
         "@angular/cli": "~8.3.20",
         "@types/node": "^12.0.0",
         "tslint": "^6.0.0",
