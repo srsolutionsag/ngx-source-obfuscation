@@ -1,0 +1,347 @@
+{
+    "$schema": "http://json-schema.org/schema",
+    "type": "object",
+    "properties": {
+        "files": {
+            "$id": "#/properties/files",
+            "type": "array",
+            "title": "The Files Schema",
+            "items": {
+                "$id": "#/properties/files/items",
+                "type": "object",
+                "title": "The Items Schema",
+                "required": [
+                    "glob",
+                    "input",
+                    "output"
+                ],
+                "properties": {
+                    "glob": {
+                        "$id": "#/properties/files/items/properties/glob",
+                        "type": "string",
+                        "title": "The Glob Schema",
+                        "default": "**/*.js",
+                        "examples": [
+                            "**/*.js"
+                        ],
+                        "pattern": "^(.+)$"
+                    },
+                    "input": {
+                        "$id": "#/properties/files/items/properties/input",
+                        "type": "string",
+                        "title": "The Input Schema",
+                        "default": "www",
+                        "examples": [
+                            "./www"
+                        ],
+                        "pattern": "^(.+)$"
+                    },
+                    "output": {
+                        "$id": "#/properties/files/items/properties/output",
+                        "type": "string",
+                        "title": "The Output Schema",
+                        "default": ".",
+                        "examples": [
+                            "."
+                        ],
+                        "pattern": "^(.+)$"
+                    }
+                }
+            }
+        }
+    },
+    "compact": {
+        "$id": "#/properties/compact",
+        "type": "boolean",
+        "title": "The Compact Schema",
+        "default": true,
+        "examples": [
+            true
+        ]
+    },
+    "controlFlowFlattening": {
+        "$id": "#/properties/controlFlowFlattening",
+        "type": "boolean",
+        "title": "The Controlflowflattening Schema",
+        "default": false,
+        "examples": [
+            false
+        ]
+    },
+    "controlFlowFlatteningThreshold": {
+        "$id": "#/properties/controlFlowFlatteningThreshold",
+        "type": "number",
+        "title": "The Controlflowflatteningthreshold Schema",
+        "default": 0.75,
+        "examples": [
+            0.75
+        ]
+    },
+    "deadCodeInjection": {
+        "$id": "#/properties/deadCodeInjection",
+        "type": "boolean",
+        "title": "The Deadcodeinjection Schema",
+        "default": false,
+        "examples": [
+            false
+        ]
+    },
+    "deadCodeInjectionThreshold": {
+        "$id": "#/properties/deadCodeInjectionThreshold",
+        "type": "number",
+        "title": "The Deadcodeinjectionthreshold Schema",
+        "default": 0.4,
+        "examples": [
+            0.4
+        ]
+    },
+    "debugProtection": {
+        "$id": "#/properties/debugProtection",
+        "type": "boolean",
+        "title": "The Debugprotection Schema",
+        "default": false,
+        "examples": [
+            false
+        ]
+    },
+    "debugProtectionInterval": {
+        "$id": "#/properties/debugProtectionInterval",
+        "type": "boolean",
+        "title": "The Debugprotectioninterval Schema",
+        "default": false,
+        "examples": [
+            false
+        ]
+    },
+    "disableConsoleOutput": {
+        "$id": "#/properties/disableConsoleOutput",
+        "type": "boolean",
+        "title": "The Disableconsoleoutput Schema",
+        "default": false,
+        "examples": [
+            false
+        ]
+    },
+    "domainLock": {
+        "$id": "#/properties/domainLock",
+        "type": "array",
+        "title": "The Domainlock Schema",
+        "default": []
+    },
+    "identifierNamesGenerator": {
+        "$id": "#/properties/identifierNamesGenerator",
+        "type": "string",
+        "title": "The Identifiernamesgenerator Schema",
+        "default": "hexadecimal",
+        "examples": [
+            "hexadecimal"
+        ],
+        "pattern": "^(mangled|hexadecimal|dictionary)$"
+    },
+    "identifiersDictionary": {
+        "$id": "#/properties/identifiersDictionary",
+        "type": "array",
+        "title": "The Identifiersdictionary Schema"
+    },
+    "identifiersPrefix": {
+        "$id": "#/properties/identifiersPrefix",
+        "type": "string",
+        "title": "The Identifiersprefix Schema",
+        "default": "",
+        "examples": [
+            ""
+        ],
+        "pattern": "^(.*)$"
+    },
+    "inputFileName": {
+        "$id": "#/properties/inputFileName",
+        "type": "string",
+        "title": "The Inputfilename Schema",
+        "default": "",
+        "examples": [
+            ""
+        ],
+        "pattern": "^(.*)$"
+    },
+    "log": {
+        "$id": "#/properties/log",
+        "type": "boolean",
+        "title": "The Log Schema",
+        "default": false,
+        "examples": [
+            false
+        ]
+    },
+    "renameGlobals": {
+        "$id": "#/properties/renameGlobals",
+        "type": "boolean",
+        "title": "The Renameglobals Schema",
+        "default": false,
+        "examples": [
+            false
+        ]
+    },
+    "reservedNames": {
+        "$id": "#/properties/reservedNames",
+        "type": "array",
+        "title": "The Reservednames Schema",
+        "default": []
+    },
+    "reservedStrings": {
+        "$id": "#/properties/reservedStrings",
+        "type": "array",
+        "title": "The Reservedstrings Schema",
+        "default": []
+    },
+    "rotateStringArray": {
+        "$id": "#/properties/rotateStringArray",
+        "type": "boolean",
+        "title": "The Rotatestringarray Schema",
+        "default": true,
+        "examples": [
+            true
+        ]
+    },
+    "seed": {
+        "$id": "#/properties/seed",
+        "type": "integer",
+        "title": "The Seed Schema",
+        "default": 0,
+        "examples": [
+            0
+        ]
+    },
+    "selfDefending": {
+        "$id": "#/properties/selfDefending",
+        "type": "boolean",
+        "title": "The Selfdefending Schema",
+        "default": false,
+        "examples": [
+            false
+        ]
+    },
+    "shuffleStringArray": {
+        "$id": "#/properties/shuffleStringArray",
+        "type": "boolean",
+        "title": "The Shufflestringarray Schema",
+        "default": true,
+        "examples": [
+            true
+        ]
+    },
+    "sourceMap": {
+        "$id": "#/properties/sourceMap",
+        "type": "boolean",
+        "title": "The Sourcemap Schema",
+        "default": false,
+        "examples": [
+            false
+        ]
+    },
+    "sourceMapBaseUrl": {
+        "$id": "#/properties/sourceMapBaseUrl",
+        "type": "string",
+        "title": "The Sourcemapbaseurl Schema",
+        "default": "",
+        "examples": [
+            ""
+        ],
+        "pattern": "^(.*)$"
+    },
+    "sourceMapFileName": {
+        "$id": "#/properties/sourceMapFileName",
+        "type": "string",
+        "title": "The Sourcemapfilename Schema",
+        "default": "",
+        "examples": [
+            ""
+        ],
+        "pattern": "^(.*)$"
+    },
+    "sourceMapMode": {
+        "$id": "#/properties/sourceMapMode",
+        "type": "string",
+        "title": "The Sourcemapmode Schema",
+        "default": "separate",
+        "examples": [
+            "separate"
+        ],
+        "pattern": "^(.*)$"
+    },
+    "splitStrings": {
+        "$id": "#/properties/splitStrings",
+        "type": "boolean",
+        "title": "The Splitstrings Schema",
+        "default": false,
+        "examples": [
+            false
+        ]
+    },
+    "splitStringsChunkLength": {
+        "$id": "#/properties/splitStringsChunkLength",
+        "type": "integer",
+        "title": "The Splitstringschunklength Schema",
+        "default": 10,
+        "examples": [
+            10
+        ]
+    },
+    "stringArray": {
+        "$id": "#/properties/stringArray",
+        "type": "boolean",
+        "title": "The Stringarray Schema",
+        "default": true,
+        "examples": [
+            true
+        ]
+    },
+    "stringArrayEncoding": {
+        "$id": "#/properties/stringArrayEncoding",
+        "type": ["boolean", "string"],
+        "title": "The Stringarrayencoding Schema",
+        "default": false,
+        "examples": [
+            true,
+            false,
+            "rc4",
+            "base64"
+        ]
+    },
+    "stringArrayThreshold": {
+        "$id": "#/properties/stringArrayThreshold",
+        "type": "number",
+        "title": "The Stringarraythreshold Schema",
+        "default": 0.75,
+        "examples": [
+            0.75
+        ]
+    },
+    "target": {
+        "$id": "#/properties/target",
+        "type": "string",
+        "title": "The Target Schema",
+        "default": "",
+        "examples": [
+            "browser"
+        ],
+        "pattern": "^(browser|browser-no-eval|node)$"
+    },
+    "transformObjectKeys": {
+        "$id": "#/properties/transformObjectKeys",
+        "type": "boolean",
+        "title": "The Transformobjectkeys Schema",
+        "default": false,
+        "examples": [
+            false
+        ]
+    },
+    "unicodeEscapeSequence": {
+        "$id": "#/properties/unicodeEscapeSequence",
+        "type": "boolean",
+        "title": "The Unicodeescapesequence Schema",
+        "default": false,
+        "examples": [
+            false
+        ]
+    }
+}

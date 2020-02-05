@@ -1,0 +1,9 @@
+{
+  "builders": {
+    "obfuscate": {
+      "implementation": "./builders/obfuscate",
+      "schema": "./builders/obfuscate/schema.json",
+      "description": "Obfuscates an angular application."
+    }
+  }
+}

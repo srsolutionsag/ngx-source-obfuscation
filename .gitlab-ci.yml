@@ -1,0 +1,57 @@
+.node_docker:
+  timeout: "10m"
+  image: node:lts-alpine
+
+variables:
+  YARN_CACHE_FOLDER: &yarn_cache_path "$CI_PROJECT_DIR/.yarn_cache_$CI_PROJECT_NAME"
+
+cache:
+  key: "$CI_PROJECT_NAME_yarn_node_cache-$CI_COMMIT_REF_SLUG"
+  paths:
+    - *yarn_cache_path
+
+before_script:
+  - yarn install --frozen-lockfile --non-interactive --link-duplicates
+
+stages:
+  - lint
+  - build
+  - test
+  - deploy
+
+lint:
+  stage: lint
+  extends: .node_docker
+  script: yarn lint
+
+build:
+  stage: build
+  extends: .node_docker
+  script: yarn build
+  artifacts:
+    name: "$CI_JOB_NAME-$CI_COMMIT_REF_SLUG"
+    paths:
+      - builders/
+    expire_in: 30 days
+
+
+deploy_dry_run:
+  stage: test
+  extends: .node_docker
+  script:
+    - npm publish --dry-run --access public
+  dependencies:
+    - build
+
+deploy:
+  stage: deploy
+  extends: .node_docker
+  only:
+    refs:
+      - master
+  script: npm publish --access public
+  when: manual
+  dependencies:
+    - build
+  allow_failure: false
+
