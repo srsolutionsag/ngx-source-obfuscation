@@ -2,6 +2,7 @@
     "name": "@srag/ngx-source-obfuscation",
     "version": "1.0.0",
     "license": "GPL-3.0-or-later",
+    "author": "Studer + Raimann AG",
     "repository": {
         "type": "git",
         "url": "https://github.com/studer-raimann/ngx-source-obfuscation.git"
