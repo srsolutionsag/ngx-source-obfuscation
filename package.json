@@ -1,31 +1,31 @@
 {
-    "name": "@srag/ngx-source-obfuscation",
-    "version": "1.0.1",
-    "license": "GPL-3.0-or-later",
-    "author": "Studer + Raimann AG",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/studer-raimann/ngx-source-obfuscation.git"
-    },
-    "builders": "builders.json",
-    "main": "./builders/obfuscate/index.js",
-    "scripts": {
-        "build": "tsc",
-        "lint": "tslint -p tsconfig.json -c tslint.json"
-    },
-    "private": false,
-    "dependencies": {
-        "@angular-devkit/architect": "^0.803.24",
-        "@angular-devkit/core": "^8.3.24",
-        "javascript-obfuscator": "^0.24.4",
-        "multi-stage-sourcemap": "^0.3.1",
-        "readdirp": "^3.3.0",
-        "rxjs": "^6.5.4"
-    },
-    "devDependencies": {
-        "@angular/cli": "~8.3.20",
-        "@types/node": "^12.0.0",
-        "tslint": "^6.0.0",
-        "typescript": "^3.7.5"
-    }
+  "name": "@srag/ngx-source-obfuscation",
+  "version": "2.0.0",
+  "license": "GPL-3.0-or-later",
+  "author": "Studer + Raimann AG",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/studer-raimann/ngx-source-obfuscation.git"
+  },
+  "builders": "builders.json",
+  "main": "./builders/obfuscate/index.js",
+  "scripts": {
+    "build": "tsc",
+    "lint": "tslint -p tsconfig.json -c tslint.json"
+  },
+  "private": false,
+  "dependencies": {
+    "@angular-devkit/architect": "^0.901.0",
+    "@angular-devkit/core": "^9.1.0",
+    "javascript-obfuscator": "^0.27.2",
+    "multi-stage-sourcemap": "^0.3.1",
+    "readdirp": "^3.4.0",
+    "rxjs": "^6.5.4"
+  },
+  "devDependencies": {
+    "@angular/cli": "^9.1.0",
+    "@types/node": "^12.0.0",
+    "tslint": "^6.1.0",
+    "typescript": "^3.8.3"
+  }
 }
