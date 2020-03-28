@@ -6,7 +6,7 @@ Angular Builder CLI which integrates the javascript-obfuscation project into ang
 
 ### Prerequisites
 * Package manager like yarn or npm
-* Angular 8.
+* Angular 8 or higher.
 
 ### Installing
 
@@ -19,6 +19,12 @@ yarn add -D @srag/@srag/ngx-source-obfuscation
 ```
 npm i -D @srag/@srag/ngx-source-obfuscation
 ```
+
+#### Version Table
+| Version  |      Angular      |
+|----------|:-----------------:|
+| ^1.0.0   |  8 |
+| ^2.0.0   |  9 |
 
 #### Angular Setup
 Create a target in your `angular.json` file. Like the one shown bellow.
