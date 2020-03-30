@@ -16,7 +16,16 @@
     "lib": [
       "es2018"
     ],
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+      // paths are relative to `baseUrl` path.
+      "paths": {
+          "@angular-devkit/*": [
+              "./node_modules/@angular-devkit/*"
+          ],
+          "rxjs": [
+              "./node_modules/rxjs"
+          ]
+      }
   },
   "include": ["builders/**/*.ts"]
 }
