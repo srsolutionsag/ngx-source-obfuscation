@@ -1,6 +1,6 @@
 {
     "name": "@srag/ngx-source-obfuscation",
-    "version": "1.0.1",
+    "version": "2.0.0",
     "license": "GPL-3.0-or-later",
     "author": "Studer + Raimann AG",
     "repository": {
@@ -15,17 +15,22 @@
     },
     "private": false,
     "dependencies": {
-        "@angular-devkit/architect": "^0.803.24",
-        "@angular-devkit/core": "^8.3.24",
-        "javascript-obfuscator": "^0.24.4",
+        "javascript-obfuscator": "^0.27.2",
         "multi-stage-sourcemap": "^0.3.1",
-        "readdirp": "^3.3.0",
-        "rxjs": "^6.5.4"
+        "readdirp": "^3.4.0"
+    },
+    "peerDependencies": {
+        "@angular-devkit/architect": ">=0.800.0 <0.1000.0",
+        "@angular-devkit/core": "^9.0.0 || ^8.0.0",
+        "rxjs": "^6.5.0"
     },
     "devDependencies": {
-        "@angular/cli": "~8.3.20",
+        "@angular-devkit/architect": "~0.901.0",
+        "@angular-devkit/core": "^9.1.0",
+        "@angular/cli": "^9.1.0",
         "@types/node": "^12.0.0",
-        "tslint": "^6.0.0",
-        "typescript": "^3.7.5"
+        "rxjs": "^6.5.0",
+        "tslint": "^6.1.0",
+        "typescript": "^3.8.3"
     }
 }

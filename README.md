@@ -6,26 +6,32 @@ Angular Builder CLI which integrates the javascript-obfuscation project into ang
 
 ### Prerequisites
 * Package manager like yarn or npm
-* Angular 8.
+* Angular 8 or higher.
 
 ### Installing
 
 #### Yarn
 ```
-yarn add -D @srag/@srag/ngx-source-obfuscation
+yarn add -D @srag/ngx-source-obfuscation
 ```
 
 #### Npm
 ```
-npm i -D @srag/@srag/ngx-source-obfuscation
+npm i -D @srag/ngx-source-obfuscation
 ```
+
+#### Version Table
+| Version  |      Angular      |
+|----------|:-----------------:|
+| ^1.0.0   |  8 |
+| ^2.0.0   |  9 |
 
 #### Angular Setup
 Create a target in your `angular.json` file. Like the one shown bellow.
 Other targets like `lint` or `build` are located in the same place.
 
-*Important* make sure your level of obfuscation and performance is suitable for your
-project! The *default* parameters are must likely *not* what you *want*. 
+*Important* make sure your levels of obfuscation and performance is suitable for your
+project! The *default* parameters are most likely *not* what you *want*. 
 
 ```json
 "obfuscate": {
@@ -51,7 +57,7 @@ project! The *default* parameters are must likely *not* what you *want*.
     }
 ```
 
-A Live Demo of the obfuscation library <https://obfuscator.io/> provided by the author of the library.
+A Live Demo of the obfuscation library <https://obfuscator.io/> is provided by the author of the library.
 A list of available configuration options can be found [here](https://github.com/javascript-obfuscator/javascript-obfuscator)
 
 #### Running the task
@@ -80,10 +86,6 @@ Prod Build
 npx ng run app:obfuscate:production
 ```
 
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
 ## Built With
 
 * [Angular-Devkti](https://www.npmjs.com/package/@angular-devkit/architect) - Used to create the builder.
@@ -93,7 +95,7 @@ Add additional notes about how to deploy this on a live system
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/studer-raimann/ngx-source-obfuscation/tags). 
 
 ## Authors
 

@@ -43,15 +43,39 @@ deploy_dry_run:
   dependencies:
     - build
 
-deploy:
+deploy-release:
   stage: deploy
   extends: .node_docker
   only:
-    refs:
-      - master
+      refs:
+          - '/^tags\/v(\d+\.\d+\.\d+)$/'
   script: npm publish --access public
   when: manual
   dependencies:
     - build
   allow_failure: false
+
+deploy-release-candidate:
+    stage: deploy
+    extends: .node_docker
+    only:
+        refs:
+            - '/^tags\/v(\d+\.\d+\.\d+)-rc\.\d{1,3}$/'
+    script: npm publish --tag rc --access public
+    when: manual
+    dependencies:
+        - build
+    allow_failure: false
+
+deploy-alpha:
+    stage: deploy
+    extends: .node_docker
+    only:
+        refs:
+            - '/^tags\/v(\d+\.\d+\.\d+)-alpha\.\d{1,3}$/'
+    script: npm publish --tag alpha --access public
+    when: manual
+    dependencies:
+        - build
+    allow_failure: false
 
